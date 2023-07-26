@@ -1,0 +1,50 @@
+//2023-07-26
+Based on "Build a Calendar With Vue, Vuetify & Firebase" tutorial
+https://www.youtube.com/watch?v=2NOsjTT1b_k
+
+//01-05 Creating a DB
+
+First we create a database with Google Firestore (part of Firebase).
+My database named "vue-calendar"
+
+In there create a collection ('table' in ordinary DB) - 'calEvent'
+Each collection has 'documents' 
+In our collection create a document:
+- autoID
+- name : String : Doctors Appointment
+- details : String : Dr Williams at 1:00PM
+- start : String : 2023-07-26
+- end : String : 2023-07-26
+- color : String : #ff8080
+
+Then create another document with the same structure - and we have all set
+
+//06-40 Register App
+Go back in FB to the list of your apps, choose this one and click on "</>" sign
+Then Register app ('vue-calendar')
+
+FB will give us back a "FireBase" object with config details:
+====
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAqpbi1pJEOZqHCRbZzm3WDYcZRz7bnfPs",
+  authDomain: "vue-calendar-edb63.firebaseapp.com",
+  projectId: "vue-calendar-edb63",
+  storageBucket: "vue-calendar-edb63.appspot.com",
+  messagingSenderId: "308904066627",
+  appId: "1:308904066627:web:912e4f626d542de6bedef6"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+====
+
+//7-40 installing cli and vue
+
+>npm i -g @vue/cli
+
